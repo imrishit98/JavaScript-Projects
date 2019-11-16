@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/336de93654.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Hi-Lo Game</title>
+    <script src="HiLo.js" defer></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            background-color: orangered;
+            color: white;
+            line-height: 2rem;
+        }
+
+        .mainContent {
+            position: relative;
+        }
+
+        .vCenter {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .theIcon {
+            font-size: 121px;
+        }
+
+        .numInput {
+            text-align: center;
+            font-size: 31px;
+            width: 61px;
+            height: 61px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: white;
+            color: white;
+            background-color: transparent;
+        }
+
+        .guessButton {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body onload="randomNum()">
+    <div class="mainContainer" id="mainContainer">
+        <div class="vCenter">
+            <h1 style="font-size: 71px;">Hi-Lo</h1>
+            <div class="theIcon">
+                <i class="fas fa-question" id="theIcon"></i>
+            </div>
+            <div class="theGuessing" id="theGuessing">
+                <h1>Choose a number between 1 and 100</h1><br>
+                <input type="text" id="numInput" class="numInput" /><br><br>
+                <input type="button" value="Make Your Guess!" onclick="guessNum()" class="guessButton" id="guessButton">
+            </div>
+            <div id="congo" style="display: none;">
+                <br>
+                <h1 style="font-size: 71px;" id="correctNum"></h1><br>
+                <h1>🎉Congratulations! You guessed correct number✌️</h1>
+                <input type="button" value="Play Again!" onclick="location.reload()" class="guessButton">
+            </div>
+            <br>
+            <p>Number of guesses: <b id="counter"></b></p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
