@@ -13,7 +13,6 @@
     <title>Rishit Patel JavaScript Project</title>
     <style>
         body {
-            position: relative;
             font-family: sans-serif;
             color: white;
             background: rgb(131, 58, 180);
@@ -36,18 +35,20 @@
 
         .mainBody {
             position: absolute;
-            text-align: center;
-            margin: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 
 <body>
-    <div class="mainBody">
-        <h1>Projects:</h1>
-        <input type="button" class="myBtn" value="Hi-Lo game" onclick="window.open('Hi-Lo Game/','_blank')">
+    <div style="position: relative;">
+        <div class="mainBody">
+            <h1>Projects:</h1>
+            <input type="button" class="myBtn" value="Hi-Lo game" onclick="window.open('Hi-Lo Game/','_blank')">
+        </div>
     </div>
-
 </body>
 
 </html>
