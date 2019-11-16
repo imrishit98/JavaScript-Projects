@@ -1,3 +1,8 @@
+/*
+    Author: Rishit Patel
+    Date: 16 Nov, 2019
+    Description: JavaScript for Hi-Lo game
+*/
 var theNum = 0;
 var counter = 0;
 function randomNum() {
