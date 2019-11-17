@@ -1,0 +1,195 @@
+<!--
+Author: Rishit Patel
+Date: Oct 18, 2019
+Description: Build Pizza Assignment
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/336de93654.js"></script>
+    <title>Build Your Own Pizza!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Menu.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menuIcon"><span class="menuTxt" onclick="openNav()"><i class="fas fa-bars"></i> Menu</span></div>
+        <div id="logo"><img src="Canadorio-Logo.png" alt="Candorio Pizza Logo."
+                style="max-width: 400px; padding-top:40px;"></div>
+
+        <div class="menu overlay" style="text-align:center;" id="myNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content" style="text-align: center;">
+                <ul>
+                    <li><a href="index.html">Home</a></li><br />
+                    <li><a href="BuildPizzaUpdated.html">Build Your Own Pizza</a></li><br />
+                    <li><a href="specials.html">Specials</a></li><br />
+                    <li><a href="Contact-Us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mainArea" id="mainArea">
+        <div class="buildTitle" id="buildTitle">
+            <h1 style="font-weight: bolder;">Build Your Own Pizza!</h1>
+        </div>
+        <div class="chooseArea" id="chooseArea">
+            <div class="chooseSize">
+                <label></i> Choose Size:</label><br />
+                <input type="radio" name="size" value="Small" onClick="updateSize('small')"> Small
+                <input type="radio" name="size" value="Medium" onClick="updateSize('medium')"> Medium
+                <input type="radio" name="size" value="Large" onClick="updateSize('large')"> Large
+                <input type="radio" name="size" value="Extra Large" onClick="updateSize('xlarge')"> Extra Large
+            </div>
+            <div class="chooseCrust">
+                <label> Choose Crust:</label><br />
+                <input type="radio" name="crust" value="Regular Crust" onClick="updateCrust('regular')"> Regular Crust
+                <input type="radio" name="crust" value="Thin Crust" onClick="updateCrust('thin')"> Thin Crust
+                <input type="radio" name="crust" value="Thick Crust" onClick="updateCrust('thick')"> Thick Crust
+            </div>
+            <div class="chooseSauce">
+                <label>Choose Sauce Type:</label><br />
+                <input type="radio" class="sauceRadio" name="sauce" value="No Sauce" onClick="updateSauce('noSauce')">
+                No Sauce
+                <input type="radio" class="sauceRadio" name="sauce" value="Italian Tomato Sauce"
+                    onClick="updateSauce('tomatoSauce')"> Italian Tomato Sauce
+                <input type="radio" class="sauceRadio" name="sauce" value="Chipotle Sauce"
+                    onClick="updateSauce('chipotleSauce')"> Chipotle Sauce <br>
+                <input type="radio" class="sauceRadio" name="sauce" value="BBQ Sauce" onClick="updateSauce('bbqSauce')">
+                BBQ Sauce
+                <input type="radio" class="sauceRadio" name="sauce" value="Pesto Sauce"
+                    onClick="updateSauce('pestoSauce')"> Pesto Sauce
+                <input type="radio" class="sauceRadio" name="sauce" value="Tandoori Sauce"
+                    onClick="updateSauce('tandooriSauce')"> Tandoori Sauce
+            </div>
+            <div class="chooseCheese">
+                <label>Choose Cheese:</label><br />
+                <input type="radio" name="theCheese" value="Normal Cheese" onclick="updateCheese()"> Normal Cheese
+                <input type="radio" name="theCheese" value="Extra Cheese" onclick="updateCheese()"> Extra Cheese
+                <input type="radio" name="theCheese" value="Less Cheese" onclick="updateCheese()"> Less Cheese
+            </div>
+            <div class="chooseToppings">
+                <label>Choose Toppings:</label><br />
+                <input type="checkbox" class="Onions" name="toppings" id="onions" value="Onions"
+                    onClick="updateToppings()">
+                <label for="onions">Onions</label>
+                <input type="checkbox" class="GreenPeppers" id="greenPeppers" name="toppings" value="Green Peppers"
+                    onClick="updateToppings()"> <label for="greenPeppers">Green Peppers</label>
+                <input type="checkbox" class="Tomato" id="tomato" name="toppings" value="Tomato"
+                    onClick="updateToppings()"> <label for="tomato">Tomato</label>
+                <input type="checkbox" class="Pineapple" id="pineapple" name="toppings" value="Pineapple"
+                    onClick="updateToppings()"> <label for="pineapple">Pineapple</label>
+                <input type="checkbox" class="Corn" id="corn" name="toppings" value="Corn" onClick="updateToppings()">
+                <label for="corn">Corn</label> <br>
+                <input type="checkbox" class="BlackOlives" id="blackOlives" name="toppings" value="Black Olives"
+                    onClick="updateToppings()"> <label for="blackOlives">Black Olives</label>
+                <input type="checkbox" class="GreenOlives" id="greenOlives" name="toppings" value="Green Olives"
+                    onClick="updateToppings()"> <label for="greenOlives">Green Olives</label>
+                <input type="checkbox" class="JalapenoPeppers" id="jalapenoPeppers" name="toppings"
+                    value="Jalapeno Peppers" onClick="updateToppings()"> <label for="jalapenoPeppers">Jalapeno
+                    Peppers</label>
+                <input type="checkbox" class="BananaPeppers" id="bananaPeppers" name="toppings" value="Banana Peppers"
+                    onClick="updateToppings()"> <label for="bananaPeppers">Banana Peppers</label>
+            </div>
+            <div class="specialInstructions">
+                <label>Special Instructions:</label><br />
+                <input type="radio" name="done" value="Well Done" onclick="updateInstructionsDone()"> Well Done
+                <input type="radio" name="done" value="Lightly Done" onclick="updateInstructionsDone()"> Lightly Done
+            </div>
+            <div class="delivery">
+                <label>Delivery or Pickup?</label><br>
+                <input type="radio" name="delivery" value="Delivery" onclick="updateDelivery()"> <i
+                    class="fas fa-biking" style="color: green;"></i> Delivery<b style="color: green;"> (FREE!)</b>
+                <input type="radio" name="delivery" value="Pick Up" onclick="updateDelivery()"> <i class="fas fa-store"
+                    style="color: green;"></i>
+                Pick Up
+            </div>
+            <div class="theCoupon" id="couponArea">
+                <br /><input type="text" id="aCoupon" class="couponBox" placeholder="Add Coupon">
+                <button type="button" class="couponAdd btn" id="couponAdd" value="applyCoupon"
+                    onClick="applyCoupon()">Apply</button>
+                <p class="couponAfter" id="couponAfter" style="display: none">Coupon Applied!</p>
+            </div>
+        </div>
+        <div>
+            <div class="pizzaImage" id="pizzaImage">
+                <img class="pizzaBase" src="Pizza-Base.png">
+                <img class="pizzaBase" src="Pizza-Cheese.png">
+                <img class="pizzaToppings" src="Banana Peppers.png" id="BananaPeppers" style="opacity: 0;">
+                <img class="pizzaToppings" src="Black Olives.png" id="BlackOlives" style="opacity: 0;">
+                <img class="pizzaToppings" src="Corn.png" id="Corn" style="opacity: 0;">
+                <img class="pizzaToppings" src="Green Olives.png" id="GreenOlives" style="opacity: 0;">
+                <img class="pizzaToppings" src="Green Peppers.png" id="GreenPeppers" style="opacity: 0;">
+                <img class="pizzaToppings" src="Jalapeno Peppers.png" id="JalapenoPeppers" style="opacity: 0;">
+                <img class="pizzaToppings" src="Onions.png" id="Onions" style="opacity: 0;">
+                <img class="pizzaToppings" src="Pineapple.png" id="Pineapple" style="opacity: 0;">
+                <img class="pizzaToppings" src="Tomato.png" id="Tomato" style="opacity: 0;">
+            </div>
+        </div>
+
+    </div>
+    <div class="reviewOrderHide" id="reviewOrder">
+        <h1 class="orderAfter" id="orderAfter">Review Your Order:</h1>
+        <div id="reviewSize">
+            <label>Size:</label><br />
+            <b id="sizeChoice"></b>
+        </div>
+        <div id="reviewCrust">
+            <label>Crust:</label><br />
+            <b id="crustChoice"></b>
+        </div>
+        <div id="reviewSauce">
+            <label>Sauce:</label><br />
+            <b id="sauceChoice"></b>
+        </div>
+        <div id="reviewCheese">
+            <label>Cheese:</label><br />
+            <b id="cheeseChoice"></b>
+        </div>
+        <div id="reviewToppings">
+            <label>Toppings:</label><br />
+            <b id="toppingsChoice"></b>
+        </div>
+        <div id="reviewInstructions">
+            <label>Special Instructions:</label><br />
+            <b id="instructionsChoice"></b>
+        </div>
+        <div id="reviewDelivery">
+            <b id="deliveryChoice"></b><br />
+        </div>
+        <div id="reviewCoupon">
+            <b id="couponChoice" class="couponChoice"></b>
+        </div>
+    </div>
+    <div class="thePrice">
+        <b>Price:</b><b id="aPrice" class="priceText"></b>
+    </div>
+    <div class="submitOrder" id="submitOrder">
+        <button type="button" class="orderAfterBtn btn" id="orderAfterBtn" value="orderAfterBtn"
+            onClick="submitOrder()">Submit Order</button>
+    </div>
+    <div class="editOrder" id="editOrder">
+        <button type="button" class="editOrderBtn btn" id="editOrderBtn" value="editOrderBtn" onClick="editOrder()">Edit
+            Order</button>
+    </div>
+    </div>
+
+    <div class="footer">
+        <div class="contact-details">
+            <strong>Canadorio Pizza</strong><br /> 60 Commerce Crescent<br /> Room E208<br /> North Bay, ON &nbsp; P1B
+            8G4<br /><br />
+            <a class="black" href="tel:7051234567">705-123-4567</a><br /><br />
+            <a href="mailto:service@canadorinopizza.ca">service@canadoriopizza.ca</a>
+            <br /><br />
+            <span class="socialicons"><i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i> <i
+                    class="fab fa-twitter-square"></i></span>
+        </div>
+    </div>
+</body>
+
+</html>
