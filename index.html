@@ -31,6 +31,13 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 3px;
+            visibility: visible;
+            animation-duration: 0.5s;
+            animation-name: glowUp;
+        }
+
+        .myBtn:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
         }
 
         .mainBody {
@@ -40,13 +47,26 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
+
+        @keyframes glowUp {
+            0% {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+                visibility: visible;
+            }
+
+            100% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="mainBody">
         <h1>Projects:</h1>
-        <input type="button" class="myBtn" value="Hi-Lo game" onclick="window.open('Hi-Lo Game/','_blank')"><br>
+        <input type="button" class="myBtn" value="Hi-Lo game" onclick="window.open('Hi-Lo Game/','_blank')">
         <input type="button" class="myBtn" value="Canadorio Pizza website"
             onclick="window.open('Canadorio-Pizza-Website/','_blank')">
     </div>
