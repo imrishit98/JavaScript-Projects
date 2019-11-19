@@ -1,0 +1,333 @@
+/*
+Author: Rishit Patel
+Date: Oct 18, 2019
+Description: Build Pizza Assignment Stylesheet
+*/
+
+body {
+  font-family: "Open Sans", sans serif;
+  background-color: white;
+  color: black;
+}
+
+h1 {
+  font-size: 31px;
+}
+
+.header {
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.socialicons i {
+  color: black;
+  font-size: 24px;
+  padding: 0px 10px 0px 10px;
+}
+
+.pizzacontainer {
+  position: relative;
+  width: 300px;
+  float: left;
+}
+
+.pizzaimage {
+  display: block;
+}
+
+.pizzaoverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease-in;
+  background-color: green;
+  border-radius: 221px;
+}
+
+.pizzacontainer:hover .pizzaoverlay {
+  opacity: 1;
+}
+
+.pizzatext {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  /* for older browsers */
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 24px;
+}
+
+sup {
+  font-size: 12px;
+}
+
+
+.black:link {
+  color: black;
+}
+
+.content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.btn {
+  font-family: "Open Sans", sans serif;
+  border: 1px solid green;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 71px;
+}
+
+.buildTitle{
+  text-align: center;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 191%;
+  height: 0%;
+  background:green;
+  z-index: -1;
+  transition: 0.5s;
+  bottom: 0;
+  border-radius: 60% 60% 0 0;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn:hover::before {
+  height: 151%;
+}
+
+.chooseArea {
+  display: block;
+  margin-left: 71px;
+  margin-right: auto;
+  text-align: left;
+  float: left;
+}
+
+.chooseSize {
+  display: block;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.chooseCrust {
+  display: block;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.chooseSauce {
+  display: block;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.chooseToppings {
+  display: block;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.specialInstructions {
+  display: block;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.delivery {
+  display: block;
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.pizzaImage{
+  height: 511px;
+  width: 511px;
+  float: right;
+  position: relative;
+}
+
+.pizzaBase{
+  height: 451px;
+  width: 451px;
+  position: absolute;
+  vertical-align: middle;
+  margin-right: 71px;
+  z-index: -1;
+}
+.pizzaToppings{
+  height: 321px;
+  width: 321px;
+  position: absolute;
+  vertical-align: middle;
+  margin-left: 61px;
+  margin-top: 61px;
+}
+
+.theCoupon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 11px;
+  margin-bottom: 11px;
+  text-align: center;
+  clear: both;
+}
+
+.couponAfter {
+  text-align: center;
+  max-height: 21px;
+  color: green;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.couponChoice {
+  text-align: center;
+  color: green;
+  font-size: 21px;
+}
+
+.couponBox {
+  height: 44px;
+  width: 251px;
+  font-size: 21px;
+  border-radius: 71px;
+  text-align: center;
+  text-transform: uppercase;
+  color: green;
+  border-color: green;
+}
+
+.thePrice {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: green;
+  height: 48px;
+  width: 251px;
+  font-size: 31px;
+  color: white;
+  border-radius: 3px;
+  clear: both;
+}
+
+.footer {
+  clear: both;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.menu ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 0 20px 0;
+  overflow: hidden;
+}
+
+.menu li {
+  float: left;
+  padding: 0 20px 0 20px;
+  text-transform: uppercase;
+}
+
+.socialicons i {
+  font-size: 24px;
+  padding: 0px 10px 0px 10px;
+  color: black;
+}
+
+.reviewOrderHide {
+  display: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.reviewOrderShow {
+  display: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.editOrder {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: none;
+}
+
+.submitOrder {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

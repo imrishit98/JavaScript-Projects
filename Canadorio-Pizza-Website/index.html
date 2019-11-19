@@ -1,0 +1,136 @@
+<!--
+Author: Rishit Patel
+Date: Sep 25, 2019
+Description: Canadorio Assignment
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/336de93654.js"></script>
+	<title>Canadorio Pizza</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+	<script src="pizza-slider.js" defer></script>
+	<link rel="stylesheet" href="pizza-slider.css">
+	<link rel="stylesheet" href="Menu.css">
+</head>
+
+<body onload="showSlides()">
+	<div class="header">
+		<div class="menuIcon"><span class="menuTxt" onclick="openNav()"><i class="fas fa-bars"></i> Menu</span></div>
+		<div id="logo"><img src="Canadorio-Logo.png" alt="Candorio Pizza Logo."
+				style="max-width: 400px; padding-top:40px;"></div>
+
+		<div class="menu overlay" style="text-align:center;" id="myNav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content" style="text-align: center;">
+				<ul>
+					<li><a href="index.html">Home</a></li><br />
+					<li><a href="BuildPizzaUpdated.html">Build Your Own Pizza</a></li><br />
+					<li><a href="specials.html">Specials</a></li><br />
+					<li><a href="Contact-Us.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="pizzaSlider slideDown" id="pizzaSlider">
+		<!-- Slideshow container -->
+		<div class="slideshow-container">
+
+			<!-- Full-width images with number and caption text -->
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<img src="pizza-banners-a.png" style="width: 100%;">
+				<div class="text rightText">
+					<span class="bigSliderText">FANTASTIC FRIDAY!</span><br>
+					<span><b>BUY 1 GET 1 FREE!</b></span>
+				</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img src="pizza-banners-b.png" style="width: 100%;">
+				<div class="text rightText">
+					<span class="bigSliderText">EVERYDAY VALUE COMBOS</span><br>
+					<span><b>Starting @$9<sup>.99</sup></b></span>
+				</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img src="pizza-banners-c.png" style="width: 100%;">
+				<div class="text leftText">
+					<span class="bigSliderText">EAT HEALTHY!</span><br>
+					<span><b>Salads and Stuff, You know🤷‍♂️</b></span>
+				</div>
+			</div>
+
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)"><i style="transform: rotate(45deg);"
+					class="fas fa-pizza-slice"></i></a>
+			<a class="next" onclick="plusSlides(1)"><i style="transform: rotate(-135deg);"
+					class="fas fa-pizza-slice"></i></a>
+		</div>
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+	</div>
+	<div class="content">
+		<h1 style="text-align:center;margin:40px 0 40px 0;" class="uppercase">North Bay's Best Pizza</h1>
+		<div style="text-align: center;">
+			<div style="display: inline-block;">
+				<div class="pizzacontainer">
+					<img src="pizza-1.jpg" alt="Pizza 1" class="pizzaimage">
+					<div class="pizzaoverlay">
+						<div class="pizzatext">Scotch Bonet Chicken Price: $8.<sup>99</sup></div>
+					</div>
+				</div>
+
+				<div class="pizzacontainer">
+					<img src="pizza-2.jpg" alt="Pizza 2" class="pizzaimage">
+					<div class="pizzaoverlay">
+						<div class="pizzatext">Ham-Chovie Delight Price: $14.<sup>99</sup></div>
+					</div>
+				</div>
+
+				<div class="pizzacontainer" style="clear:both;">
+					<img src="pizza-3.jpg" alt="Pizza 3" class="pizzaimage">
+					<div class="pizzaoverlay">
+						<div class="pizzatext">Mambo #5 Price: $9.<sup>99</sup></div>
+					</div>
+				</div>
+
+				<div class="pizzacontainer">
+					<img src="pizza-4.jpg" alt="Pizza 4" class="pizzaimage">
+					<div class="pizzaoverlay">
+						<div class="pizzatext">Mediterranean Price: $11.<sup>99</sup></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="contact-details">
+			<strong>Canadorio Pizza</strong><br />
+			60 Commerce Crescent<br />
+			Room E208<br />
+			North Bay, ON &nbsp; P1B 8G4<br /><br />
+			<a class="black" href="tel:7051234567">705-123-4567</a><br /><br />
+			<a href="mailto:service@canadorinopizza.ca">service@canadoriopizza.ca</a>
+			<br /><br />
+			<span class="socialicons"><i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i> <i
+					class="fab fa-twitter-square"></i></span>
+		</div>
+	</div>
+</body>
+
+</html>

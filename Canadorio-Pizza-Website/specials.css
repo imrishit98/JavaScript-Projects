@@ -1,0 +1,30 @@
+.accordion {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 1s;
+    border-radius: 3px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: green; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #dddddd;
+    overflow: hidden;
+  }
+
+  .specialsList{
+      text-align: center;
+      width: 40%;
+      margin: auto;
+  }
