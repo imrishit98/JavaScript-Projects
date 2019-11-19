@@ -1,0 +1,58 @@
+<!-- 
+    Author: Rishit Patel
+    Date: 18 Nov, 2019
+    Description: Simple Snake Game
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple JavaScipt Snake Game</title>
+    <script src="snakeScript.js" defer></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+        }
+
+        #gameC {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-style: solid;
+            border-width: 5px;
+            border-color: red;
+        }
+
+        h1 {
+            font-size: 51px;
+        }
+
+        .score {
+            color: white;
+            font-size: 21px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainDiv">
+        <h1>SIMPLE SNAKE GAME</h1>
+        <canvas id="gameC" width="400" height="400">
+        </canvas>
+        <div class="score">
+            <span>Score: <span id="score"></span></span>
+        </div>
+    </div>
+
+</body>
+
+</html>
