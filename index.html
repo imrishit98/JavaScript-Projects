@@ -1,0 +1,88 @@
+<!-- 
+    Author: Rishit Patel
+    Date: 16 Nov, 2019
+    Description: Index file for JavaScript Projects for github
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/336de93654.js"></script>
+    <title>Rishit Patel JavaScript Project</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            color: white;
+            background: rgb(131, 58, 180);
+            background: linear-gradient(90deg, rgba(131, 58, 180, 1) 22%, rgba(94, 69, 224, 1) 100%);
+        }
+
+        a {
+            color: white;
+        }
+
+        .myBtn {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 3px;
+            visibility: visible;
+            animation-duration: 0.5s;
+            animation-name: glowUp;
+            width: 100%;
+        }
+
+
+        .myBtn:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        .mainBody {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        @keyframes glowUp {
+            0% {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+                visibility: visible;
+            }
+
+            100% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainBody">
+        <h1>Projects:</h1>
+        <input type="button" class="myBtn" value="Hi-Lo game" onclick="window.open('Hi-Lo Game/','_blank')"><br>
+        <input type="button" class="myBtn" value="Canadorio Pizza website"
+            onclick="window.open('Canadorio-Pizza-Website/','_blank')"><br>
+        <input type="button" class="myBtn" value="Simple Math Program"
+            onclick="window.open('Simple Math Program/','_blank')"><br>
+        <br><a href="https://github.com/imrishit98/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"
+                style="font-size: 41px;"></i></a><br>
+        <br><b>Made with ❤️ by <a href="https://rishitpatel.com" target="_blank" rel="noopener noreferrer">Rishit
+                Patel</a></b>
+    </div>
+</body>
+
+</html>
