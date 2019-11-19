@@ -1,0 +1,120 @@
+<!-- 
+Author: Rishit Patel
+Date: Sep 27, 2019
+Description: Math Assignment -->
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Math - Add, substract, divide, multiply numbers.</title>
+	<script>
+		function theMaths() {
+			var firstVal = document.getElementById("firstNumber").value;
+			var secondVal = document.getElementById("secondNumber").value;
+			var optn = document.getElementById("dropdown").value;
+
+			switch (optn) {
+				case "+":
+					document.getElementById("mathAnswer").value = parseFloat(firstVal) + parseFloat(secondVal);
+					break;
+				case "-":
+					document.getElementById("mathAnswer").value = parseFloat(firstVal) - parseFloat(secondVal);
+					break;
+				case "*":
+					document.getElementById("mathAnswer").value = parseFloat(firstVal) * parseFloat(secondVal);
+					break;
+				case "/":
+					document.getElementById("mathAnswer").value = parseFloat(firstVal) / parseFloat(secondVal);
+					break;
+			}
+
+		}
+	</script>
+	<style>
+		body {
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			color: white;
+			background: rgb(253, 159, 58);
+			background: linear-gradient(337deg, rgba(253, 159, 58, 1) 0%, rgba(251, 126, 68, 1) 32%, rgba(221, 31, 31, 1) 85%);
+		}
+
+		input[type=text] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			background: transparent;
+			color: white;
+			border-style: solid;
+			border-bottom: 6px solid white;
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+			font-size: 21px;
+		}
+
+		.myBtn {
+			background-color: white;
+			border: none;
+			color: black;
+			padding: 5px 15px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 41px;
+			margin: 4px 2px;
+			cursor: pointer;
+			border-radius: 3px;
+		}
+
+		.mainDiv {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		::placeholder {
+			/* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: white;
+			opacity: 0.85;
+			/* Firefox */
+		}
+
+		:-ms-input-placeholder {
+			/* Internet Explorer 10-11 */
+			color: white;
+		}
+
+		::-ms-input-placeholder {
+			/* Microsoft Edge */
+			color: white;
+		}
+
+		input:focus::-webkit-input-placeholder {
+			color: transparent;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="mainDiv">
+		<h1>Simple math program</h1>
+		<input type="text" id="firstNumber" placeholder="First Number"><br>
+		<select id="dropdown" class="myBtn">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select><br>
+		<input type="text" id="secondNumber" placeholder="Second Number"> <br>
+		<input type="button" id="ansButton" value="=" onClick="theMaths()" class="myBtn" /><br>
+		<input type="text" id="mathAnswer" placeholder="Answer"><br />
+	</div>
+
+
+</body>
+
+</html>
