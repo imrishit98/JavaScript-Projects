@@ -1,3 +1,8 @@
+/*
+    Author: Rishit Patel
+    Date: 20 Nov, 2019
+    Description: Escape The Spade Game
+*/
 function startGame() {
     ranNum1 = Math.floor((Math.random() * 4) + 1);
     ranNum2 = Math.floor((Math.random() * 4) + 1);
