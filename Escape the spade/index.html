@@ -1,6 +1,6 @@
 <!-- 
     Author: Rishit Patel
-    Date: 20 Nov, 2019
+    Date: 18 Nov, 2019
     Description: Escape The Spade Game
 -->
 <!DOCTYPE html>
@@ -15,8 +15,15 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="addMoney()">
     <div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h1>Red Card = 3 points</h1>
+            <h1>Club = 0 points</h1>
+            <h1>Spade = You lose!</h1>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Rules</span>
         <div class="logo">
             <img src="escapethespadelogo.png" alt="logo" style="width: 400px; height: 200px;">
         </div>
@@ -30,6 +37,9 @@
             <br>
             <input type="button" value="Let's Play" onclick="startGame()" class="btn">
             <h1 id="result"></h1>
+            <h1 id="score"></h1>
+            <h1 id="points"></h1>
+
         </div>
     </div>
 </body>
