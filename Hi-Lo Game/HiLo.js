@@ -10,13 +10,7 @@ var counter = 0;
 var db;
 var name;
 
-function firebaseDB() {
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    db = firebase.database();
-}
 function randomNum() {
-    firebaseDB();
     theNum = Math.floor((Math.random() * 100) + 1);
 }
 
@@ -47,18 +41,6 @@ function guessNum() {
         document.getElementById("correctNum").innerHTML = theNum;
         document.getElementById("congo").style.display = "block";
         document.body.style.backgroundColor = "limegreen";
-        name = prompt("Please enter your name");
-        submitScore();
     }
     document.getElementById("numInput").value = "";
-}
-
-function submitScore() {
-    var data = {
-        Name: name,
-        Guesses: counter
-    }
-    var ref = db.ref('Hi-Low/guessScore');
-    ref.push(data);
-
 }
