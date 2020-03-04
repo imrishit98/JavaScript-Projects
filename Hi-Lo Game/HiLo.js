@@ -4,7 +4,6 @@
  * Description: Hi-Low Game 
  */
 
-import firebaseConfig from '../../firebaseConfig';
 
 var theNum = 0;
 var counter = 0;
@@ -12,7 +11,6 @@ var db;
 var name;
 
 function firebaseDB() {
-    // Your web app's Firebase configuration
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     db = firebase.database();
