@@ -4,6 +4,8 @@
  * Description: Hi-Low Game 
  */
 
+import firebaseConfig from '../../firebaseConfig';
+
 var theNum = 0;
 var counter = 0;
 var db;
@@ -11,15 +13,6 @@ var name;
 
 function firebaseDB() {
     // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyAtNqu1bYZMJnN9_cg_aaSY3kXv8jCpD-M",
-        authDomain: "javascript-hi-low-game.firebaseapp.com",
-        databaseURL: "https://javascript-hi-low-game.firebaseio.com",
-        projectId: "javascript-hi-low-game",
-        storageBucket: "javascript-hi-low-game.appspot.com",
-        messagingSenderId: "618945294874",
-        appId: "1:618945294874:web:ee39c3571dfb13448e17a3"
-    };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     db = firebase.database();
